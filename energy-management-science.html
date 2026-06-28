@@ -100,6 +100,48 @@ a{color:#8b5cf6;text-decoration:none;transition:color .2s}a:hover{color:#a78bfa}
 .footer-links a{font-size:13px;color:#5b4b7a;transition:color .2s}
 .footer-links a:hover{color:#94a3b8}
 .footer-copy{width:100%;text-align:center;font-size:12px;color:#3d2f5e;margin-top:12px;padding-top:20px;border-top:1px solid #241a3a}
+/* === VISUAL ELEMENTS === */
+.hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;display:block;border:1px solid #241a3a;box-shadow:0 10px 36px rgba(0,0,0,.45)}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:30px 0}
+.stat-card{background:#140d22;border:1px solid #241a3a;border-radius:14px;padding:22px 14px;text-align:center}
+.stat-card .em{font-size:30px;display:block;margin-bottom:8px}
+.stat-card .num{font-size:25px;font-weight:700;color:#e2e8f0;line-height:1.1}
+.stat-card .lab{font-size:12.5px;color:#64748b;margin-top:6px}
+.icon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:30px 0}
+@media(max-width:560px){.icon-grid{grid-template-columns:1fr}}
+.icon-item{display:flex;gap:12px;align-items:flex-start;background:#140d22;border:1px solid #241a3a;border-radius:12px;padding:14px 16px}
+.icon-item .ic{font-size:22px;line-height:1.2;flex-shrink:0}
+.icon-item .tx{font-size:14px;color:#cbd5e1;line-height:1.5}
+.icon-item .tx b{color:#e2e8f0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0}
+@media(max-width:560px){.compare{grid-template-columns:1fr}}
+.compare-card{border-radius:14px;padding:20px 18px;border:1px solid}
+.compare-card .h{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.compare-bad{border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.06)}.compare-bad .h{color:#f87171}
+.compare-good{border-color:rgba(139,92,246,.4);background:rgba(139,92,246,.10)}.compare-good .h{color:#a78bfa}
+.compare-card ul{list-style:none;padding:0;margin:0}
+.compare-card li{font-size:14px;color:#cbd5e1;padding:7px 0;line-height:1.5;border-bottom:1px solid rgba(255,255,255,.04)}
+.compare-card li:last-child{border-bottom:none}
+.step-flow{display:flex;gap:0;margin:30px 0;flex-wrap:wrap;align-items:stretch}
+.step{flex:1;min-width:110px;text-align:center;position:relative;padding:8px 6px}
+.step .n{width:42px;height:42px;border-radius:50%;background:rgba(217,70,239,.07);color:#a78bfa;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:10px;border:1px solid rgba(139,92,246,.4)}
+.step .st{font-size:13px;color:#cbd5e1;line-height:1.4;font-weight:600}
+.step .sd{font-size:12px;color:#64748b;margin-top:4px}
+.step:not(:last-child)::after{content:'\2192';position:absolute;right:-8px;top:10px;color:#334155;font-size:20px}
+@media(max-width:560px){.step-flow{flex-direction:column}.step:not(:last-child)::after{content:'\2193';right:50%;top:auto;bottom:-22px;transform:translateX(50%)}}
+.vcallout{position:relative;overflow:hidden;border-radius:16px;padding:26px 24px;margin:32px 0;background:linear-gradient(135deg,rgba(139,92,246,.10),rgba(217,70,239,.07));border:1px solid rgba(139,92,246,.4)}
+.vcallout .orb{position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.4),transparent 70%);top:-70px;right:-50px;filter:blur(8px);pointer-events:none}
+.vcallout .vt{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#a78bfa;margin-bottom:8px;position:relative}
+.vcallout p{font-size:16px;color:#e2e8f0;line-height:1.7;margin:0;position:relative}
+.vquote{position:relative;margin:32px 0;padding:26px 26px 26px 66px;background:#140d22;border:1px solid #241a3a;border-radius:14px;font-size:18px;font-style:italic;color:#cbd5e1;line-height:1.7}
+.vquote::before{content:'\201C';position:absolute;left:20px;top:-4px;font-size:70px;color:#8b5cf6;font-family:Georgia,serif;line-height:1.1}
+.vquote cite{display:block;font-size:14px;font-style:normal;color:#64748b;margin-top:12px;font-weight:600}
+.vbars{margin:30px 0;display:flex;flex-direction:column;gap:16px;background:#140d22;border:1px solid #241a3a;border-radius:14px;padding:22px}
+.vbars .bt{font-size:14px;font-weight:600;color:#e2e8f0;margin-bottom:4px}
+.vbar-row .bl{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;color:#cbd5e1}
+.vbar-track{height:12px;border-radius:999px;background:#1e1e2e;overflow:hidden}
+.vbar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#8b5cf6,#a855f7)}
+
 </style>
     <!-- Privacy Analytics (GDPR-safe) -->
     <script async data-website-id="productivity-hacks" src="https://counterapi.com/v1/toolnest-productivityhacks/pageviews.js"></script>
@@ -145,24 +187,47 @@ a{color:#8b5cf6;text-decoration:none;transition:color .2s}a:hover{color:#a78bfa}
   </div>
 </section>
 
+<div style="max-width:1120px;margin:0 auto 12px;padding:0 24px"><img class="hero-img" src="https://images.unsplash.com/photo-1591290619762-71308e0a2a98?w=1200&h=675&fit=crop" alt="A person recharging their energy with a walk outdoors in nature" width="1200" height="675" loading="lazy" decoding="async"></div>
+
 <article class="article-body">
   <h2>Two Hours Is Not Always Two Hours</h2>
   <p>Imagine two identical two-hour windows on your calendar. In the first, you've slept well, you're caffeinated, and it's your most alert time of day — you finish a week's work. In the second, you're post-lunch sluggish and running on four hours of sleep — you accomplish almost nothing. <strong>Same time, wildly different output.</strong> This is the core insight of energy management: the number of hours you have matters far less than the quality of energy you bring to them. Time is fixed and finite. Energy is variable — and, crucially, renewable.</p>
 
+  
+  <div class="stat-grid">
+    <div class="stat-card"><span class="em">⚡</span><span class="num">4</span><div class="lab">Sources of energy</div></div>
+    <div class="stat-card"><span class="em">🔄</span><span class="num">90 min</span><div class="lab">Ultradian cycle length</div></div>
+    <div class="stat-card"><span class="em">🔋</span><span class="num">Renewable</span><div class="lab">Unlike time</div></div>
+    <div class="stat-card"><span class="em">📉</span><span class="num">Burnout</span><div class="lab">The cost of ignoring it</div></div>
+  </div>
   <h2>Four Sources of Energy</h2>
   <p>Performance researchers identify four distinct energy reservoirs, each of which you can deliberately manage. <strong>Physical</strong> energy comes from sleep, nutrition, hydration, and movement — it's the foundation everything else rests on. <strong>Emotional</strong> energy is driven by your mood and sense of meaning; chronic stress drains it fast. <strong>Mental</strong> energy is your capacity for focused attention and clear thinking. <strong>Spiritual</strong> energy comes from purpose — knowing why your work matters. Neglect any one and total output collapses, no matter how disciplined your schedule.</p>
 
+  
+  <div class="vbars"><div class="bt">Typical energy across a day</div>
+      <div class="vbar-row"><div class="bl"><span>Morning peak (9–11 AM)</span><span>Highest</span></div><div class="vbar-track"><div class="vbar-fill" style="width:95%"></div></div></div>
+      <div class="vbar-row"><div class="bl"><span>Post-lunch dip (1–3 PM)</span><span>Lowest</span></div><div class="vbar-track"><div class="vbar-fill" style="width:35%"></div></div></div>
+      <div class="vbar-row"><div class="bl"><span>Late-afternoon rise (4–6 PM)</span><span>Medium-high</span></div><div class="vbar-track"><div class="vbar-fill" style="width:70%"></div></div></div>
+      <div class="vbar-row"><div class="bl"><span>Evening wind-down (after 8 PM)</span><span>Declining</span></div><div class="vbar-track"><div class="vbar-fill" style="width:30%"></div></div></div>
+  </div>
   <h2>Work With Your Ultradian Rhythms</h2>
   <p>Your brain operates in <strong>ultradian cycles</strong> — roughly 90-to-120-minute waves of high focus followed by a mandatory dip. Forcing through the dip with caffeine and willpower feels productive but actually degrades the quality of your work and borrows against tomorrow's energy. Instead, plan in 90-minute sprints separated by genuine 15–20 minute breaks. Step away from the screen, move your body, let your mind wander. The break isn't slacking — it's how your brain consolidates and prepares for the next peak.</p>
 
   <h2>Find Your Chronotype</h2>
   <p>Not everyone peaks at the same hour. Your <strong>chronotype</strong> — largely genetic — determines whether you're a morning lark, a night owl, or somewhere in between. Fighting it is a losing battle. Track your energy and focus for a week to find your daily peak (often mid-morning for most people, but not all), then defend that window ruthlessly for your hardest, most valuable work. Push meetings, email, and admin into your naturally lower-energy hours. Aligning work to biology beats forcing biology to fit your calendar.</p>
 
+  
+  <div class="compare">
+    <div class="compare-card compare-bad"><div class="h">&#10060; Time-management mindset</div><ul><li>Power through the afternoon slump</li><li>Work 10h, sleep 5h, repeat</li><li>Treat rest as weakness</li><li>Measure hours, not output</li></ul></div>
+    <div class="compare-card compare-good"><div class="h">&#9989; Energy-management mindset</div><ul><li>Match hard tasks to peak hours</li><li>Sprint and genuinely recover</li><li>Schedule rest like meetings</li><li>Measure focus and results</li></ul></div>
+  </div>
   <h2>The Recovery Paradox</h2>
   <p>Athletes have always known what knowledge workers forget: <strong>performance = stress + recovery</strong>. You don't get stronger during the workout — you get stronger during the rest that follows. The same is true for cognitive work. Periods of intense effort must be balanced with real recovery, or you slide into chronic fatigue and burnout. Recovery isn't just sleep — it's anything that genuinely recharges you: exercise, time in nature, deep conversation, or playful distraction. Schedule recovery as deliberately as you schedule work.</p>
 
   <h2>The Energy Audit</h2>
   <p>For one week, rate your energy on a 1–10 scale every two hours alongside what you were doing. Patterns will leap out: maybe your energy tanks after a carb-heavy lunch, or spikes after a midday walk, or craters during a particular recurring meeting. This simple data lets you redesign your days around energy instead of around the clock. Most people discover they have 3–4 genuinely high-energy hours per day. The goal isn't to create more — it's to stop wasting the ones you have on low-value work.</p>
+
+  <div class="vcallout"><span class="orb"></span><div class="vt">The Recovery Paradox</div><p>You don't need more hours &mdash; you need more capacity. Real recovery (sleep, walks, play) isn't lazy; it's the multiplier that makes your working hours far more valuable. Protect it as fiercely as you protect your calendar.</p></div>
 </article>
 
 <div style="max-width:720px;margin:0 auto;">

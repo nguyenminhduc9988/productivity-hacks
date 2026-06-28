@@ -100,6 +100,48 @@ a{color:#8b5cf6;text-decoration:none;transition:color .2s}a:hover{color:#a78bfa}
 .footer-links a{font-size:13px;color:#5b4b7a;transition:color .2s}
 .footer-links a:hover{color:#94a3b8}
 .footer-copy{width:100%;text-align:center;font-size:12px;color:#3d2f5e;margin-top:12px;padding-top:20px;border-top:1px solid #241a3a}
+/* === VISUAL ELEMENTS === */
+.hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;display:block;border:1px solid #241a3a;box-shadow:0 10px 36px rgba(0,0,0,.45)}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:30px 0}
+.stat-card{background:#140d22;border:1px solid #241a3a;border-radius:14px;padding:22px 14px;text-align:center}
+.stat-card .em{font-size:30px;display:block;margin-bottom:8px}
+.stat-card .num{font-size:25px;font-weight:700;color:#e2e8f0;line-height:1.1}
+.stat-card .lab{font-size:12.5px;color:#64748b;margin-top:6px}
+.icon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:30px 0}
+@media(max-width:560px){.icon-grid{grid-template-columns:1fr}}
+.icon-item{display:flex;gap:12px;align-items:flex-start;background:#140d22;border:1px solid #241a3a;border-radius:12px;padding:14px 16px}
+.icon-item .ic{font-size:22px;line-height:1.2;flex-shrink:0}
+.icon-item .tx{font-size:14px;color:#cbd5e1;line-height:1.5}
+.icon-item .tx b{color:#e2e8f0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0}
+@media(max-width:560px){.compare{grid-template-columns:1fr}}
+.compare-card{border-radius:14px;padding:20px 18px;border:1px solid}
+.compare-card .h{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.compare-bad{border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.06)}.compare-bad .h{color:#f87171}
+.compare-good{border-color:rgba(139,92,246,.4);background:rgba(139,92,246,.10)}.compare-good .h{color:#a78bfa}
+.compare-card ul{list-style:none;padding:0;margin:0}
+.compare-card li{font-size:14px;color:#cbd5e1;padding:7px 0;line-height:1.5;border-bottom:1px solid rgba(255,255,255,.04)}
+.compare-card li:last-child{border-bottom:none}
+.step-flow{display:flex;gap:0;margin:30px 0;flex-wrap:wrap;align-items:stretch}
+.step{flex:1;min-width:110px;text-align:center;position:relative;padding:8px 6px}
+.step .n{width:42px;height:42px;border-radius:50%;background:rgba(217,70,239,.07);color:#a78bfa;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:10px;border:1px solid rgba(139,92,246,.4)}
+.step .st{font-size:13px;color:#cbd5e1;line-height:1.4;font-weight:600}
+.step .sd{font-size:12px;color:#64748b;margin-top:4px}
+.step:not(:last-child)::after{content:'\2192';position:absolute;right:-8px;top:10px;color:#334155;font-size:20px}
+@media(max-width:560px){.step-flow{flex-direction:column}.step:not(:last-child)::after{content:'\2193';right:50%;top:auto;bottom:-22px;transform:translateX(50%)}}
+.vcallout{position:relative;overflow:hidden;border-radius:16px;padding:26px 24px;margin:32px 0;background:linear-gradient(135deg,rgba(139,92,246,.10),rgba(217,70,239,.07));border:1px solid rgba(139,92,246,.4)}
+.vcallout .orb{position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.4),transparent 70%);top:-70px;right:-50px;filter:blur(8px);pointer-events:none}
+.vcallout .vt{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#a78bfa;margin-bottom:8px;position:relative}
+.vcallout p{font-size:16px;color:#e2e8f0;line-height:1.7;margin:0;position:relative}
+.vquote{position:relative;margin:32px 0;padding:26px 26px 26px 66px;background:#140d22;border:1px solid #241a3a;border-radius:14px;font-size:18px;font-style:italic;color:#cbd5e1;line-height:1.7}
+.vquote::before{content:'\201C';position:absolute;left:20px;top:-4px;font-size:70px;color:#8b5cf6;font-family:Georgia,serif;line-height:1.1}
+.vquote cite{display:block;font-size:14px;font-style:normal;color:#64748b;margin-top:12px;font-weight:600}
+.vbars{margin:30px 0;display:flex;flex-direction:column;gap:16px;background:#140d22;border:1px solid #241a3a;border-radius:14px;padding:22px}
+.vbars .bt{font-size:14px;font-weight:600;color:#e2e8f0;margin-bottom:4px}
+.vbar-row .bl{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;color:#cbd5e1}
+.vbar-track{height:12px;border-radius:999px;background:#1e1e2e;overflow:hidden}
+.vbar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#8b5cf6,#a855f7)}
+
 </style>
     <!-- Privacy Analytics (GDPR-safe) -->
     <script async data-website-id="productivity-hacks" src="https://counterapi.com/v1/toolnest-productivityhacks/pageviews.js"></script>
@@ -145,24 +187,47 @@ a{color:#8b5cf6;text-decoration:none;transition:color .2s}a:hover{color:#a78bfa}
   </div>
 </section>
 
+<div style="max-width:1120px;margin:0 auto 12px;padding:0 24px"><img class="hero-img" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=675&fit=crop" alt="A person working with deep focus at a clean desk with a laptop" width="1200" height="675" loading="lazy" decoding="async"></div>
+
 <article class="article-body">
   <h2>Focus Is a Muscle — Not a Personality Trait</h2>
   <p>We treat the ability to concentrate like a fixed trait: some people are "focused," the rest of us are "easily distracted." This is backwards. Attention is a trainable cognitive skill, and like any muscle it atrophies when unused and strengthens under progressive load. The average worker is interrupted every <strong>11 minutes</strong> and takes 23 minutes to return to deep focus — meaning most people never reach it at all.</p>
 
+  
+  <div class="stat-grid">
+    <div class="stat-card"><span class="em">⏳</span><span class="num">11 min</span><div class="lab">Between interruptions</div></div>
+    <div class="stat-card"><span class="em">🔄</span><span class="num">23 min</span><div class="lab">To fully refocus</div></div>
+    <div class="stat-card"><span class="em">🧠</span><span class="num">90 min</span><div class="lab">Peak focus cycle</div></div>
+    <div class="stat-card"><span class="em">📊</span><span class="num">3–4h</span><div class="lab">Ideal deep work / day</div></div>
+  </div>
   <h2>What Deep Work Actually Means</h2>
   <p>Deep work is the ability to focus without distraction on a cognitively demanding task. It's the state where you produce your best work, learn fastest, and solve problems that shallow, fractured attention cannot touch. Shallow work — email, Slack, status meetings — feels productive but creates little lasting value. The goal isn't to eliminate shallow work; it's to protect deep work first and squeeze the shallow work into the margins.</p>
 
   <h2>The 4 Deep Work Styles (Pick One)</h2>
   <p><strong>The Monastic</strong> eliminates shallow obligation entirely — ideal for writers and researchers who can wall off weeks. <strong>The Bimodal</strong> splits time into clearly defined stretches (e.g., 4 days deep, 3 days shallow). <strong>The Rhythmic</strong> makes deep work a daily habit — usually a 90-minute block at the same time every morning. <strong>The Journalistic</strong> grabs deep work whenever a window opens, a skill that takes months to develop. Most knowledge workers do best with the rhythmic approach: a non-negotiable morning block before the world wakes up.</p>
 
+  
+  <div class="step-flow">
+    <div class="step"><span class="n">1</span><div class="st">Close tabs</div><div class="sd">Kill unrelated apps</div></div>
+    <div class="step"><span class="n">2</span><div class="st">Phone away</div><div class="sd">Physically in another room</div></div>
+    <div class="step"><span class="n">3</span><div class="st">Set timer</div><div class="sd">Visible 90-min clock</div></div>
+    <div class="step"><span class="n">4</span><div class="st">One outcome</div><div class="sd">Define it before starting</div></div>
+  </div>
   <h2>The 90-Minute Deep Work Protocol</h2>
   <p>Neuroscience shows the brain works in <strong>ultradian rhythms</strong> — roughly 90-minute cycles of peak focus followed by a needed dip. Stop fighting this. Structure your block as: (1) close every tab and app not related to the task, (2) put your phone in another room — not on silent, physically away, (3) set a visible 90-minute timer, (4) define the single outcome you're producing before you start. Ambiguity is the enemy of focus; clarity is its fuel.</p>
 
+  
+  <div class="compare">
+    <div class="compare-card compare-bad"><div class="h">&#10060; Fractured 'busy' work</div><ul><li>Notifications on, inbox always open</li><li>Context-switching every few minutes</li><li>'Quick' phone checks between tasks</li><li>Measuring activity, not output</li></ul></div>
+    <div class="compare-card compare-good"><div class="h">&#9989; Protected deep work</div><ul><li>Single tab, one task, door closed</li><li>90-min blocks on the calendar</li><li>Phone in another room</li><li>Scoreboard = real things finished</li></ul></div>
+  </div>
   <h2>Embrace Productive Boredom</h2>
   <p>Every time you reach for your phone in a checkout line or elevator, you're training your brain to need constant stimulation. The fix is uncomfortable and simple: schedule periods of low-stimulation. Take walks without headphones. Wait without scrolling. These small acts of restraint rebuild your capacity for sustained attention — and they compound fast. Within two weeks of deliberate practice, most people report noticeably longer focus windows.</p>
 
   <h2>Measure What Matters</h2>
   <p>What gets measured gets managed. Track deep work hours with a simple tally — a paper grid, a spreadsheet, anything. You'll quickly see the gap between how focused you think you are and how focused you actually are. The act of counting alone makes you protective of the time. Aim for 3–4 hours of true deep work per day; more than that yields diminishing returns and burnout. Quality, not hours logged, is the scoreboard.</p>
+
+  <div class="vcallout"><span class="orb"></span><div class="vt">Productive Boredom</div><p>Every time you reach for your phone in a queue or lift, you train your brain to need constant stimulation. Take walks without headphones. Wait without scrolling. Within two weeks, your focus window noticeably widens.</p></div>
 </article>
 
 <div style="max-width:720px;margin:0 auto;">

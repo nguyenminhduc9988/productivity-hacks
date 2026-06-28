@@ -100,6 +100,48 @@ a{color:#8b5cf6;text-decoration:none;transition:color .2s}a:hover{color:#a78bfa}
 .footer-links a{font-size:13px;color:#5b4b7a;transition:color .2s}
 .footer-links a:hover{color:#94a3b8}
 .footer-copy{width:100%;text-align:center;font-size:12px;color:#3d2f5e;margin-top:12px;padding-top:20px;border-top:1px solid #241a3a}
+/* === VISUAL ELEMENTS === */
+.hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;display:block;border:1px solid #241a3a;box-shadow:0 10px 36px rgba(0,0,0,.45)}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:30px 0}
+.stat-card{background:#140d22;border:1px solid #241a3a;border-radius:14px;padding:22px 14px;text-align:center}
+.stat-card .em{font-size:30px;display:block;margin-bottom:8px}
+.stat-card .num{font-size:25px;font-weight:700;color:#e2e8f0;line-height:1.1}
+.stat-card .lab{font-size:12.5px;color:#64748b;margin-top:6px}
+.icon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:30px 0}
+@media(max-width:560px){.icon-grid{grid-template-columns:1fr}}
+.icon-item{display:flex;gap:12px;align-items:flex-start;background:#140d22;border:1px solid #241a3a;border-radius:12px;padding:14px 16px}
+.icon-item .ic{font-size:22px;line-height:1.2;flex-shrink:0}
+.icon-item .tx{font-size:14px;color:#cbd5e1;line-height:1.5}
+.icon-item .tx b{color:#e2e8f0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0}
+@media(max-width:560px){.compare{grid-template-columns:1fr}}
+.compare-card{border-radius:14px;padding:20px 18px;border:1px solid}
+.compare-card .h{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.compare-bad{border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.06)}.compare-bad .h{color:#f87171}
+.compare-good{border-color:rgba(139,92,246,.4);background:rgba(139,92,246,.10)}.compare-good .h{color:#a78bfa}
+.compare-card ul{list-style:none;padding:0;margin:0}
+.compare-card li{font-size:14px;color:#cbd5e1;padding:7px 0;line-height:1.5;border-bottom:1px solid rgba(255,255,255,.04)}
+.compare-card li:last-child{border-bottom:none}
+.step-flow{display:flex;gap:0;margin:30px 0;flex-wrap:wrap;align-items:stretch}
+.step{flex:1;min-width:110px;text-align:center;position:relative;padding:8px 6px}
+.step .n{width:42px;height:42px;border-radius:50%;background:rgba(217,70,239,.07);color:#a78bfa;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:10px;border:1px solid rgba(139,92,246,.4)}
+.step .st{font-size:13px;color:#cbd5e1;line-height:1.4;font-weight:600}
+.step .sd{font-size:12px;color:#64748b;margin-top:4px}
+.step:not(:last-child)::after{content:'\2192';position:absolute;right:-8px;top:10px;color:#334155;font-size:20px}
+@media(max-width:560px){.step-flow{flex-direction:column}.step:not(:last-child)::after{content:'\2193';right:50%;top:auto;bottom:-22px;transform:translateX(50%)}}
+.vcallout{position:relative;overflow:hidden;border-radius:16px;padding:26px 24px;margin:32px 0;background:linear-gradient(135deg,rgba(139,92,246,.10),rgba(217,70,239,.07));border:1px solid rgba(139,92,246,.4)}
+.vcallout .orb{position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.4),transparent 70%);top:-70px;right:-50px;filter:blur(8px);pointer-events:none}
+.vcallout .vt{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#a78bfa;margin-bottom:8px;position:relative}
+.vcallout p{font-size:16px;color:#e2e8f0;line-height:1.7;margin:0;position:relative}
+.vquote{position:relative;margin:32px 0;padding:26px 26px 26px 66px;background:#140d22;border:1px solid #241a3a;border-radius:14px;font-size:18px;font-style:italic;color:#cbd5e1;line-height:1.7}
+.vquote::before{content:'\201C';position:absolute;left:20px;top:-4px;font-size:70px;color:#8b5cf6;font-family:Georgia,serif;line-height:1.1}
+.vquote cite{display:block;font-size:14px;font-style:normal;color:#64748b;margin-top:12px;font-weight:600}
+.vbars{margin:30px 0;display:flex;flex-direction:column;gap:16px;background:#140d22;border:1px solid #241a3a;border-radius:14px;padding:22px}
+.vbars .bt{font-size:14px;font-weight:600;color:#e2e8f0;margin-bottom:4px}
+.vbar-row .bl{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;color:#cbd5e1}
+.vbar-track{height:12px;border-radius:999px;background:#1e1e2e;overflow:hidden}
+.vbar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#8b5cf6,#a855f7)}
+
 </style>
     <!-- Privacy Analytics (GDPR-safe) -->
     <script async data-website-id="productivity-hacks" src="https://counterapi.com/v1/toolnest-productivityhacks/pageviews.js"></script>
@@ -145,16 +187,34 @@ a{color:#8b5cf6;text-decoration:none;transition:color .2s}a:hover{color:#a78bfa}
   </div>
 </section>
 
+<div style="max-width:1120px;margin:0 auto 12px;padding:0 24px"><img class="hero-img" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&h=675&fit=crop" alt="A smartphone and laptop showing popular productivity apps" width="1200" height="675" loading="lazy" decoding="async"></div>
+
 <article class="article-body">
   <h2>More Apps ≠ More Productive</h2>
   <p>Here's the uncomfortable truth: <strong>most people don't have a tools problem, they have a systems problem.</strong> Installing a sixth note-taking app won't fix a habit of never reviewing your notes. That said, the right tool — one that fits your workflow rather than forcing you to fit it — can remove enough friction to make a real system stick. We tested over 60 apps across six categories. These 12 survived. Pick one per category, not all twelve.</p>
 
+  
+  <div class="stat-grid">
+    <div class="stat-card"><span class="em">📱</span><span class="num">60+</span><div class="lab">Apps we tested</div></div>
+    <div class="stat-card"><span class="em">✅</span><span class="num">12</span><div class="lab">Actually worth your time</div></div>
+    <div class="stat-card"><span class="em">🧠</span><span class="num">Second brain</span><div class="lab">For your knowledge</div></div>
+    <div class="stat-card"><span class="em">🤖</span><span class="num">Automate</span><div class="lab">The repetitive busywork</div></div>
+  </div>
   <h2>Task Management: Capture, Plan, Execute</h2>
   <p>For capturing tasks fast and trusting nothing falls through, <strong>Todoist</strong> remains the gold standard — its natural-language input ("write report every friday at 9am") is unmatched. <strong>Things 3</strong> is the pick for Apple users who want beautiful, calm design and zero clutter. For teams and complex projects, <strong>Linear</strong> has become the developer favorite, combining speed with a keyboard-first interface that keeps you in flow. Whichever you choose, the rule is the same: one inbox, processed daily, never two systems competing for your trust.</p>
 
   <h2>Notes & Knowledge: Your Second Brain</h2>
   <p><strong>Notion</strong> is the all-in-one powerhouse — flexible enough to build anything, though that flexibility can become a trap if you spend more time tweaking templates than writing. <strong>Obsidian</strong> wins for thinkers who want local files, blazing speed, and a web of linked notes that grows smarter over time. <strong>Apple Notes</strong> is the underrated dark horse: free, instant, and genuinely excellent in 2026 — perfect if you want zero setup. The best note app is the one you'll actually open every day.</p>
 
+  
+  <div class="icon-grid">
+    <div class="icon-item"><span class="ic">☑️</span><span class="tx"><b>Task managers</b> &mdash; Capture once, trust the system</span></div>
+    <div class="icon-item"><span class="ic">📝</span><span class="tx"><b>Notes &amp; PKM</b> &mdash; Build a searchable second brain</span></div>
+    <div class="icon-item"><span class="ic">🔒</span><span class="tx"><b>Focus blockers</b> &mdash; Lock out distracting sites</span></div>
+    <div class="icon-item"><span class="ic">📅</span><span class="tx"><b>Calendars</b> &mdash; Time-block, don't just list</span></div>
+    <div class="icon-item"><span class="ic">🤖</span><span class="tx"><b>Automation</b> &mdash; Connect tools, kill copy-paste</span></div>
+    <div class="icon-item"><span class="ic">🧩</span><span class="tx"><b>Habit trackers</b> &mdash; Make good behaviour automatic</span></div>
+  </div>
   <h2>Focus & Distraction Blocking</h2>
   <p><strong>Freedom</strong> blocks distracting sites and apps across every device simultaneously — there's no escaping to your phone when your laptop is locked down. <strong>Forest</strong> turns focus into a game: plant a virtual tree that dies if you leave the app, a surprisingly effective bit of psychology. Pair either with your phone's built-in Focus modes for a layered defense. The goal isn't willpower — it's removing the decision to resist entirely.</p>
 
@@ -164,8 +224,15 @@ a{color:#8b5cf6;text-decoration:none;transition:color .2s}a:hover{color:#a78bfa}
   <h2>Automation: Let Software Do the Busywork</h2>
   <p><strong>Zapier</strong> connects 7,000+ apps to move data automatically — save email attachments to cloud storage, turn Slack messages into tasks, you name it. <strong>Raycast</strong> is the Mac power-user's launcher: a single keystroke runs scripts, clips text, manages windows, and triggers automations without leaving your keyboard. The less manual context-switching you do, the more focus you preserve for real work.</p>
 
+  
+  <div class="compare">
+    <div class="compare-card compare-bad"><div class="h">&#10060; Tool fatigue</div><ul><li>Chasing every shiny new app</li><li>Using 10 tools that don't talk</li><li>More setup time than doing time</li><li>Apps as a form of procrastination</li></ul></div>
+    <div class="compare-card compare-good"><div class="h">&#9989; Tool discipline</div><ul><li>Pick one per category, go deep</li><li>Integrate them into one workflow</li><li>A tool serves a habit, not vice-versa</li><li>Best app = the one you'll keep using</li></ul></div>
+  </div>
   <h2>The One Rule That Matters Most</h2>
   <p>Tools amplify systems — they don't replace them. Before you download anything, write down your actual workflow in plain sentences: "When a task comes in, I capture it here. Each morning I review it there. Deep work happens in this block." Only then choose the tool that makes those sentences effortless. The best productivity stack of 2026 is the simple one you actually use.</p>
+
+  <div class="vcallout"><span class="orb"></span><div class="vt">More Apps ≠ More Productive</div><p>No app will fix a broken workflow. Choose the fewest tools that cover capture, planning, focus and review &mdash; then master them. A simple system you actually use beats a powerful one you abandon in a week.</p></div>
 </article>
 
 <div style="max-width:720px;margin:0 auto;">

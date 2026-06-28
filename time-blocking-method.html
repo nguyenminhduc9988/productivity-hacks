@@ -100,6 +100,48 @@ a{color:#8b5cf6;text-decoration:none;transition:color .2s}a:hover{color:#a78bfa}
 .footer-links a{font-size:13px;color:#5b4b7a;transition:color .2s}
 .footer-links a:hover{color:#94a3b8}
 .footer-copy{width:100%;text-align:center;font-size:12px;color:#3d2f5e;margin-top:12px;padding-top:20px;border-top:1px solid #241a3a}
+/* === VISUAL ELEMENTS === */
+.hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;display:block;border:1px solid #241a3a;box-shadow:0 10px 36px rgba(0,0,0,.45)}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:30px 0}
+.stat-card{background:#140d22;border:1px solid #241a3a;border-radius:14px;padding:22px 14px;text-align:center}
+.stat-card .em{font-size:30px;display:block;margin-bottom:8px}
+.stat-card .num{font-size:25px;font-weight:700;color:#e2e8f0;line-height:1.1}
+.stat-card .lab{font-size:12.5px;color:#64748b;margin-top:6px}
+.icon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:30px 0}
+@media(max-width:560px){.icon-grid{grid-template-columns:1fr}}
+.icon-item{display:flex;gap:12px;align-items:flex-start;background:#140d22;border:1px solid #241a3a;border-radius:12px;padding:14px 16px}
+.icon-item .ic{font-size:22px;line-height:1.2;flex-shrink:0}
+.icon-item .tx{font-size:14px;color:#cbd5e1;line-height:1.5}
+.icon-item .tx b{color:#e2e8f0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0}
+@media(max-width:560px){.compare{grid-template-columns:1fr}}
+.compare-card{border-radius:14px;padding:20px 18px;border:1px solid}
+.compare-card .h{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.compare-bad{border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.06)}.compare-bad .h{color:#f87171}
+.compare-good{border-color:rgba(139,92,246,.4);background:rgba(139,92,246,.10)}.compare-good .h{color:#a78bfa}
+.compare-card ul{list-style:none;padding:0;margin:0}
+.compare-card li{font-size:14px;color:#cbd5e1;padding:7px 0;line-height:1.5;border-bottom:1px solid rgba(255,255,255,.04)}
+.compare-card li:last-child{border-bottom:none}
+.step-flow{display:flex;gap:0;margin:30px 0;flex-wrap:wrap;align-items:stretch}
+.step{flex:1;min-width:110px;text-align:center;position:relative;padding:8px 6px}
+.step .n{width:42px;height:42px;border-radius:50%;background:rgba(217,70,239,.07);color:#a78bfa;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:10px;border:1px solid rgba(139,92,246,.4)}
+.step .st{font-size:13px;color:#cbd5e1;line-height:1.4;font-weight:600}
+.step .sd{font-size:12px;color:#64748b;margin-top:4px}
+.step:not(:last-child)::after{content:'\2192';position:absolute;right:-8px;top:10px;color:#334155;font-size:20px}
+@media(max-width:560px){.step-flow{flex-direction:column}.step:not(:last-child)::after{content:'\2193';right:50%;top:auto;bottom:-22px;transform:translateX(50%)}}
+.vcallout{position:relative;overflow:hidden;border-radius:16px;padding:26px 24px;margin:32px 0;background:linear-gradient(135deg,rgba(139,92,246,.10),rgba(217,70,239,.07));border:1px solid rgba(139,92,246,.4)}
+.vcallout .orb{position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.4),transparent 70%);top:-70px;right:-50px;filter:blur(8px);pointer-events:none}
+.vcallout .vt{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#a78bfa;margin-bottom:8px;position:relative}
+.vcallout p{font-size:16px;color:#e2e8f0;line-height:1.7;margin:0;position:relative}
+.vquote{position:relative;margin:32px 0;padding:26px 26px 26px 66px;background:#140d22;border:1px solid #241a3a;border-radius:14px;font-size:18px;font-style:italic;color:#cbd5e1;line-height:1.7}
+.vquote::before{content:'\201C';position:absolute;left:20px;top:-4px;font-size:70px;color:#8b5cf6;font-family:Georgia,serif;line-height:1.1}
+.vquote cite{display:block;font-size:14px;font-style:normal;color:#64748b;margin-top:12px;font-weight:600}
+.vbars{margin:30px 0;display:flex;flex-direction:column;gap:16px;background:#140d22;border:1px solid #241a3a;border-radius:14px;padding:22px}
+.vbars .bt{font-size:14px;font-weight:600;color:#e2e8f0;margin-bottom:4px}
+.vbar-row .bl{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;color:#cbd5e1}
+.vbar-track{height:12px;border-radius:999px;background:#1e1e2e;overflow:hidden}
+.vbar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#8b5cf6,#a855f7)}
+
 </style>
     <!-- Privacy Analytics (GDPR-safe) -->
     <script async data-website-id="productivity-hacks" src="https://counterapi.com/v1/toolnest-productivityhacks/pageviews.js"></script>
@@ -145,24 +187,48 @@ a{color:#8b5cf6;text-decoration:none;transition:color .2s}a:hover{color:#a78bfa}
   </div>
 </section>
 
+<div style="max-width:1120px;margin:0 auto 12px;padding:0 24px"><img class="hero-img" src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&h=675&fit=crop" alt="A calendar with colour-coded time blocks on a laptop screen" width="1200" height="675" loading="lazy" decoding="async"></div>
+
 <article class="article-body">
   <h2>The Problem With a To-Do List</h2>
   <p>A to-do list tells you <em>what</em> to do but never <em>when</em>. The result is a list of 30 items that all feel equally urgent, so you bounce between them, finishing the easy ones and avoiding the hard ones until they become emergencies. Calendars, by contrast, are honest: there are only 24 hours in a day and you can see every one of them. <strong>Time blocking</strong> is the act of moving your intentions off the list and onto the calendar — turning intention into commitment.</p>
 
+  
+  <div class="stat-grid">
+    <div class="stat-card"><span class="em">📅</span><span class="num">Blocks</span><div class="lab">Replace to-do lists</div></div>
+    <div class="stat-card"><span class="em">🎯</span><span class="num">1 task</span><div class="lab">Per block, no overlap</div></div>
+    <div class="stat-card"><span class="em">🔄</span><span class="num">Themes</span><div class="lab">Day-level focus</div></div>
+    <div class="stat-card"><span class="em">🏅</span><span class="num">Buffers</span><div class="lab">Absorb the overflow</div></div>
+  </div>
   <h2>How Time Blocking Works</h2>
   <p>You divide your day into dedicated blocks, each assigned to a single task or category. A block isn't a guess about what you might do — it's a decision you've already made. <strong>9:00–10:30: write the proposal. 10:30–11: email and Slack. 11:00–12:00: review the design.</strong> When the block ends, you stop, even mid-sentence. The constraint is the point: it forces you to estimate realistically and prevents any single task from swallowing your whole day.</p>
 
   <h2>The Power of "One Thing Per Block"</h2>
   <p>Multitasking is a myth — what we call multitasking is rapid context-switching, which research shows can cut productivity by up to <strong>40%</strong>. Time blocking's secret weapon is monotasking: one block, one task, zero exceptions. During a deep-work block you don't check email "real quick." You protect the block like a meeting with your most important client — because it is. Most people are shocked by how much they finish when they give a single task their undivided attention for 60–90 uninterrupted minutes.</p>
 
+  
+  <div class="vbars"><div class="bt">Example themed-week schedule</div>
+      <div class="vbar-row"><div class="bl"><span>Monday &mdash; Deep work</span><span>Maker mode</span></div><div class="vbar-track"><div class="vbar-fill" style="width:100%"></div></div></div>
+      <div class="vbar-row"><div class="bl"><span>Tuesday &mdash; Deep work</span><span>Maker mode</span></div><div class="vbar-track"><div class="vbar-fill" style="width:100%"></div></div></div>
+      <div class="vbar-row"><div class="bl"><span>Wednesday &mdash; Meetings</span><span>Manager mode</span></div><div class="vbar-track"><div class="vbar-fill" style="width:60%"></div></div></div>
+      <div class="vbar-row"><div class="bl"><span>Thursday &mdash; Deep work</span><span>Maker mode</span></div><div class="vbar-track"><div class="vbar-fill" style="width:100%"></div></div></div>
+      <div class="vbar-row"><div class="bl"><span>Friday &mdash; Admin &amp; review</span><span>Shallow mode</span></div><div class="vbar-track"><div class="vbar-fill" style="width:40%"></div></div></div>
+  </div>
   <h2>Theme Your Days</h2>
   <p>For bigger-picture control, assign a theme to each day of the week. Monday: planning and strategy. Tuesday and Wednesday: deep execution. Thursday: meetings and collaboration. Friday: admin, review, and wrap-up. Themed days reduce the cognitive cost of constantly switching modes and let you batch similar work, which is dramatically more efficient than scattering it across the week. Jack Dorsey famously ran two companies this way, devoting each weekday to one company's theme.</p>
 
+  
+  <div class="compare">
+    <div class="compare-card compare-bad"><div class="h">&#10060; The reactive calendar</div><ul><li>Back-to-back meetings, no gaps</li><li>Every block a different task type</li><li>Surprises blow up the whole day</li><li>To-dos carry over for weeks</li></ul></div>
+    <div class="compare-card compare-good"><div class="h">&#9989; The blocked calendar</div><ul><li>30-min buffers between blocks</li><li>Like-tasks batched into themes</li><li>Buffer absorbs the unexpected</li><li>Everything has a home in time</li></ul></div>
+  </div>
   <h2>Build in Buffer Blocks</h2>
   <p>Beginners pack every minute and then derail the moment anything runs long. The fix: schedule <strong>buffer blocks</strong> — empty 30-minute slots between meetings and deep-work sessions. Use them for the inevitable overflows, the urgent-but-unplanned requests, and a real break. If you finish a task early, the buffer absorbs the slack instead of forcing you to improvise. A calendar with zero white space is a calendar guaranteed to fail.</p>
 
   <h2>Review and Adjust Weekly</h2>
   <p>Time blocking isn't a rigid doctrine — it's a feedback loop. Spend 15 minutes every Friday reviewing what actually happened versus what you planned. Which blocks ran over? Which tasks did you chronically avoid? Adjust your estimates, redistribute your themes, and rebuild next week's calendar from the lessons. Within a month you'll have a scheduling system tuned to how you actually work — not how you wish you did.</p>
+
+  <div class="vcallout"><span class="orb"></span><div class="vt">One Thing Per Block</div><p>Multitasking is a myth &mdash; it's just fast switching that drains focus. The power of time blocking is radical single-tasking: one block, one outcome, fully present. Bored of it? Good. That boredom is where the real work happens.</p></div>
 </article>
 
 <div style="max-width:720px;margin:0 auto;">
